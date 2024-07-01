@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+
+    <form id="nameForm" method="GET" action="index.php">
+        <input type="hidden" id="name" name="name">
+    </form>
+
+    <script>
+        // Prompt the user for their name when the page loads
+        window.onload = function() {
+            let name = prompt("Please enter your name:");
+            
+            // If the user enters a name, submit the form to the PHP script
+            if (name) {
+                document.getElementById("name").value = name;
+                document.getElementById("nameForm").submit();
+            } else {
+                alert("No name entered. Please refresh the page and try again.");
+            }
+        }
+    </script>
+</body>
+</html>
